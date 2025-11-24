@@ -1,3 +1,38 @@
+"""
+XF Tools - Converter
+====================
+
+A utility script to convert Yamaha XF-enhanced MIDI files into MusicXML lead sheets.
+
+This tool is designed to parse MIDI files that contain Yamaha XF specific metadata,
+specifically focusing on Chord events (SysEx) and Rehearsal Marks. It combines these
+extracted features with the melody track (assumed to be on Channel 1) to produce
+a MusicXML file suitable for viewing in notation software (Dorico, Cubase, MuseScore, etc.).
+
+Features:
+- Extracts chord symbols from Yamaha XF SysEx messages (ID: 0x43 0x7B 0x01).
+- Extracts rehearsal marks (Intro, A, B, Ending, etc.) from XF SysEx (ID: 0x43 0x7B 0x02).
+- Extracts melody notes from MIDI Channel 1.
+- Normalizes chord names for MusicXML compatibility (via music21).
+- Generates a standard MusicXML file.
+
+Dependencies:
+- mido: For low-level MIDI message parsing.
+- music21: For music theory object modeling and MusicXML generation.
+
+Usage Examples:
+    # Generate a lead sheet from a MIDI file
+    python converter.py --input input/song.mid --output output/lead_sheet.musicxml
+
+    # specific check for chord data existence
+    python converter.py --check-chords input/song.mid
+
+    # specific check for rehearsal marks
+    python converter.py --check-rehe input/song.mid
+
+For a full list of arguments, run:
+    python converter.py --help
+"""
 import argparse
 import sys
 from pathlib import Path
