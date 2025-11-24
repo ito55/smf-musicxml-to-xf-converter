@@ -1,0 +1,9 @@
+# Virtual environment
+venv/
+
+# Output files
+output/
+
+# --- Local / Private Files ---
+# Ignore specific licensed files that should not be committed to the repository.
+*yorunikakeru*
