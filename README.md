@@ -1,8 +1,7 @@
-# 🎼 xf-tools
 
 ## Overview
 
-`xf-tools` is a Python command-line utility designed to synthesize **XF files** (YAMAHA's extended format) by combining two essential inputs: a **MusicXML** file (containing lyrics and chord data) and a **Standard MIDI File (SMF)** (containing performance data like melody and timing).
+`smf-musicxml-to-xf-converter` is a Python command-line utility designed to synthesize **XF files** (YAMAHA's extended format) by combining two essential inputs: a **MusicXML** file (containing lyrics and chord data) and a **Standard MIDI File (SMF)** (containing performance data like melody and timing).
 
 This tool allows musicians and developers to utilize standard notation software like MuseScore to input detailed musical information (chords and lyrics) and integrate it with existing, high-quality performance data, resulting in a single XF file ready for display and playback on YAMAHA keyboards and modules.
 
